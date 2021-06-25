@@ -26,7 +26,7 @@ In order to replicated the results the projet can be launched by following the i
 - `virtualenv venv`
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
-- `python main.py`
+- `python3 main.py` (Please make sur `abdomen.mha` is located in the same directory as main.py as it was not included in this zip file)
 
 ***Tested on machine using Python 3.8***
 This should launch a window and should display a 3D Volume of the abdomen among with the Kidneys displayed in a distinct purple color
