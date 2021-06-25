@@ -14,7 +14,7 @@
   - You can select modes 0, 1, 2 
     - Mode = 0 :  Display segmented and original volumes (DEFAULT)
     - Mode = 1 :  Display original volume 
-    - Mode = 2 :  Display segmented volume resulting from Handle_ITK
+    - Mode = 2 :  Display segmented volume resulting from Handle_ITK call
 
 ## Results :
 
