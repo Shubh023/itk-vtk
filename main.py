@@ -71,13 +71,17 @@ def Handle_ITK(FILENAME):
     cast.SetOutputMinimum(0)    # Min pixel value is et to 0
     cast.SetOutputMaximum(255)  # Max pixel value is et to 100
     cast.Update()
+
+    # DISPLAY RESULT AFTER SEGMENATION    
+    # coordinates =  [[10, 160, 230], [95, 355, 335]]
+    # display(cast.GetOutput(), coordinates)
     
     # Writing thresholded image into file RESULTNAME
     itk.imwrite(cast.GetOutput(), RESULTNAME)
     return cast
 
 
-def Handle_VTK(input_image, result_image, coordinates, mode=0):
+def Handle_VTK(res, input_image, result_image, mode=0):
     '''
     Parameters
     ----------
@@ -170,8 +174,13 @@ def Handle_VTK(input_image, result_image, coordinates, mode=0):
     
     # FINAL RENDERER : Combining segmented kidneys and the rest of the abdomen 
     final_renderer = vtk.vtkRenderer()
-    final_renderer.AddActor(cube_volume)
-    final_renderer.AddActor(res_cube_volume)
+    if mode == 0:
+        final_renderer.AddActor(cube_volume)
+        final_renderer.AddActor(res_cube_volume)
+    if mode == 1:
+        final_renderer.AddActor(cube_volume)
+    if mode == 2:
+        final_renderer.AddActor(res_cube_volume)
     final_renderer.SetBackground(colors.GetColor3d('peru'))
     final_renderer.SetBackground2(colors.GetColor3d('peru'))
     final_renderer.SetUseFXAA(True);
@@ -192,10 +201,14 @@ def Handle_VTK(input_image, result_image, coordinates, mode=0):
     render_window.Render()
     interactor.Start()
 
-if __name__ == '__main__':
-    print(itk.Version.GetITKVersion())
-    print(vtk.vtkVersion.GetVTKVersion())
-    res = Handle_ITK(FILENAME)
-    # coordinates =  [[10, 160, 230], [95, 355, 335]]
-    # display(res.GetOutput(), coordinates)
-    Handle_VTK(FILENAME, RESULTNAME, coordinates)
+
+# Checking if correct version of modules are loaded 
+print(itk.Version.GetITKVersion())
+print(vtk.vtkVersion.GetVTKVersion())
+
+# TESTING OUT Implmented Functions
+res = Handle_ITK(FILENAME)
+# TESTING OUT Implmented Modes For VTK 
+Handle_VTK(res, FILENAME, RESULTNAME, 0)
+# Handle_VTK(FILENAME, RESULTNAME, 1)
+# Handle_VTK(FILENAME, RESULTNAME, 2)
