@@ -1,0 +1,10 @@
+itk==5.2.0.post2
+itk-core==5.2.0.post2
+itk-filtering==5.2.0.post2
+itk-io==5.2.0.post2
+itk-numerics==5.2.0.post2
+itk-registration==5.2.0.post2
+itk-segmentation==5.2.0.post2
+matplotlib==3.4.2
+numpy==1.21.0
+vtk==9.0.1
