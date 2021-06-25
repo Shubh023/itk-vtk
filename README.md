@@ -17,8 +17,9 @@
     - Mode = 2 :  Display segmented volume resulting from Handle_ITK
 
 ## Results :
-#### Rendering results were saved as images with png format and can be found in the ***results*** directory.
-#### **The file named ***`RENDU FINALE.png`*** is the choosen final render for the projet.**
+
+#### Rendering results were saved as images with png format and can be found in the [***results***](results) directory.
+#### **The file [***RENDU FINALE.png***](results/RENDU%20FINALE.png) is the choosen final render for the projet.**
 
 
 In order to replicated the results the projet can be launched by following the instruction below:
