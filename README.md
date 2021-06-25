@@ -1,4 +1,4 @@
-# PROJET ITK-VTK : Kidney Segmentation
+# PROJET ITK-VTK : Kidney Segmentation & Visualization
 
 ### **Author** :
 - #### **Login Epita** : ***shubhamkumar.patel***
