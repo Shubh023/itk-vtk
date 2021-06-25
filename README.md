@@ -18,7 +18,7 @@
 
 ## Results :
 #### Rendering results were saved as images with png format and can be found in the ***results*** directory.
-#### **The file named ***RENDU FINALE.png*** is the choosen final render for the projet.**
+#### **The file named ***`RENDU FINALE.png`*** is the choosen final render for the projet.**
 
 
 In order to replicated the results the projet can be launched by following the instruction below:
